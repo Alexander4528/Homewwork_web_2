@@ -76,7 +76,6 @@ CREATE TABLE subscriptions (
     CHECK (subscriber_id != target_user_id)
 );
 
-
 -- Создание индексов для улучшения производительности
 CREATE INDEX idx_posts_author_id ON posts(author_id);
 CREATE INDEX idx_posts_status ON posts(status);
