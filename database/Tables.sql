@@ -1,4 +1,3 @@
-
 -- Создание таблицы пользователей
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -76,6 +75,7 @@ CREATE TABLE subscriptions (
     UNIQUE(subscriber_id, target_user_id),
     CHECK (subscriber_id != target_user_id)
 );
+
 
 -- Создание индексов для улучшения производительности
 CREATE INDEX idx_posts_author_id ON posts(author_id);
